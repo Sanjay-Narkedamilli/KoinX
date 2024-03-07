@@ -19,7 +19,7 @@ import Coinlike from "./Coinlike";
 import Getstarted from "./Getstarted";
 
 const Coins = () => {
-  const { id } = useParams();
+  const id  = 'bitcoin';
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [coin, setCoin] = useState(null);
