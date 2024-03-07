@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/cryptocurrencies/bitcoin" element={<Coins/>} />
+        <Route path="/cryptocurrencies/:id" element={<Coins/>} />
         <Route path="/cryptotaxes" element={<Cryptotaxes />} />
         <Route path="/freetools" element={<Freetools />} />
         <Route path="/resourcecenter" element={<Resourcecenter />} />
