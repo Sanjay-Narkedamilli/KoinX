@@ -1,0 +1,69 @@
+.ad{
+    /* width: 35%; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display:flexbox;
+    padding: 12px;
+    margin:20px;
+    background-color: #0052fe;
+    border-radius: 12px;
+}
+.adimg{
+    margin: 10px;
+    max-width: 50%;
+    max-height: 50%;
+}
+.text2{
+    margin: 10px;
+    color: white;
+}
+.text6{
+    margin-bottom: 20px;
+    color: white;
+}
+.custom-button {
+    margin: 10px;
+    margin-left:20%;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.icn{
+    margin-top: 3px;
+    size-adjust:inherit;
+}
+.custom-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container {
+    margin-left: 5px;
+    /* Adjust the margin as needed */
+}
+@media (max-width: 480px) {
+    .ad{
+        width: -moz-fit-content;
+        width:fit-content;
+        margin: 15px;
+        border-radius: 2%;
+        margin-bottom: 10px;
+    }
+    .custom-button{
+        margin-left:10%;
+        align-items: center;
+        width: 80%;
+    }
+}

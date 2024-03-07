@@ -1,0 +1,65 @@
+.bx{
+        /* width: 35%; */
+        display: flexbox;
+        padding: 12px;
+        margin: 20px;
+        background-color: white;
+        border-radius: 12px;
+}
+.heading{
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+}
+.cin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cnt {
+    flex: 1;
+    padding: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+}
+.greenper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(8, 235, 8, 0.104);
+    width: 70px;
+    color: green;
+    height:25px;
+}
+.redper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.153);
+    width: 70px;
+    color: red;
+    height:25px;
+}
+.coin-text{
+    margin-left:10px;
+}
+.per{
+    padding-top: 4px;
+    justify-content: center;
+        text-align: center;
+    font-size: small;
+    display: block;
+        width: 100%;
+        height: 100%;
+}
+@media (max-width: 480px) {
+    .bx{
+        width: 100%;
+        margin:2px;
+        border-radius:0%;
+        margin-bottom: 10px;
+    }
+}

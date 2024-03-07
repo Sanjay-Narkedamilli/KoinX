@@ -1,0 +1,247 @@
+h5{
+    margin:10px;
+}
+.full{
+    display:flex;
+}
+.colu1{
+    width:70vw;
+}
+.colu2 {
+    /* width: 30vw; */
+}
+.crycn{
+    font-weight: lighter;
+}
+.nme{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height:50px;
+    margin:10px;
+}
+.pch{
+    margin-left: 20px;
+}
+.pchr{
+    margin-left: 10px;
+    font-size: small;
+    font-weight: lighter;
+    color: grey;
+}
+.price {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.price-usd{
+    font-size: x-large;
+    font-weight: bolder;
+    margin-left: 15px;
+}
+.price-inr{
+    font-size:small;
+    margin-left: 15px;
+}
+.coin{
+    margin:10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.cin-img{
+    margin:5px;
+    height: 60%;
+
+}
+.cin-sym{
+    margin: 5px;
+    font-size: small;
+}
+.cin-name{
+    margin: 5px;
+    font-weight: bolder;
+    font-size:x-large;
+}
+.rank{
+    display: flex;
+    margin-left:25px;
+    height: 60%;
+    width: 80px;
+    color: white;
+    border-radius: 5px;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.chart{
+    padding: 10px;
+    margin:10px;
+    width:85%;
+    height:100%;
+}
+.sentiments {
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.about-coin {
+    /* width: 80%; */
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cnt-in{
+    font-weight: lighter;
+    display: flex;
+    font-size: small;
+    align-items: center;
+}
+
+.Team{
+    align-items: center;
+    justify-content: start;
+    background-color: rgba(67, 201, 201, 0.193);
+    display: flex;
+    height: 20vh;
+    margin:10px;
+    border-radius: 5%;
+}
+.alsolike{
+    width: 100vw;
+    background-color: white;
+    padding: 25px;
+}
+.mayl{
+    margin:20px;
+    font-size: larger;
+    font-weight: 900;
+    margin-top: 40px;
+}
+.col1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:200px;
+}
+.colim{
+    margin:10px;
+    height: 100px;
+        width: 100px;
+}
+.cnt-cr{
+    width: 20px;
+    height:20px;
+    margin:3px;
+    background-color: rgb(0, 153, 255);
+    border-radius: 50%;
+}
+.cnt-f{
+    width: 20px;
+    height:20px;
+    margin:3px;
+    background-color: rgb(254, 136, 1);
+    border-radius: 50%;
+}
+.clc{
+    width: 200px;
+        height: 200px;
+        border: 20px solid rgb(0, 153, 255);
+        border-radius: 50%;
+        border-right-color: rgb(254, 136, 1);
+    margin-right:20px;
+}
+.tokenomics {
+    /* width: 80%; */
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.about-sec{
+    margin-top: 10px;
+}
+.keys{
+    margin: 5px;
+    padding: 10px;
+}
+.ana {
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    color: grey;
+}
+.sen{
+    /* margin:5px; */
+    margin-bottom: 10px;
+}
+.key{
+    color:grey;
+}
+.anae{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+.cir{
+    display: flex;
+    background-color: rgba(72, 247, 9, 0.166);
+    width: 100px;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: green;
+}
+.box{
+    margin-left: 40px;
+}
+.box-cnt{
+    display: flex;
+    margin:10px;
+    align-items: center;
+    width:70vw;
+    color: grey;
+}
+.buy{
+    margin-left: 30px;
+    margin-right:5px;
+    height:5px;
+    width:50%;
+    background-color:green;
+}
+.hold{
+    margin-left: 25px;
+    margin-right: 5px;
+    height:5px;
+    width:10%;
+    background-color:grey;
+    border-radius: 2px;
+}
+.sell{
+    margin-left: 30px;
+    margin-right: 5px;
+    height:5px;
+    width:15%;
+    background-color:red;
+    border-radius: 2px;
+}
+@media (max-width: 480px) {
+    .full{
+        display: inline;
+    }
+    .colu1{
+        width: 100%;
+    }
+    .colu2{
+        width:100%;
+    }
+}
