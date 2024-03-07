@@ -1,33 +1,20 @@
 import React from "react";
-import { Card, CardContent, Typography, makeStyles } from "@material-ui/core";
+import { Card, CardContent, Typography } from "@mui/material";
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-const useStyles = makeStyles((theme) => ({
-  scrollContainer: {
-    display: "flex",
-    overflowX: "auto",
-    padding: theme.spacing(2),
-  },
-  card: {
-    minWidth: 275,
-    marginRight: theme.spacing(2),
-  },
-  greenCard: {
-    backgroundColor: "#4caf50",
-  },
-  blueCard: {
-    backgroundColor: "#2196f3",
-  },
-}));
 
 const Twocards = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.scrollContainer}>
+    <div style={{ display: "flex", overflowX: "auto", padding: "16px" }}>
       <Card
-        className={`${classes.card} ${classes.greenCard}`}
-        style={{ width: "50%", height: "20vh" }}
+        style={{
+          minWidth: 275,
+          marginRight: "16px",
+          backgroundColor: "#4caf50",
+          width: "50%",
+          height: "20vh",
+        }}
       >
         <CardContent style={{ display: "flex" }}>
           <img
@@ -53,8 +40,13 @@ const Twocards = () => {
         </CardContent>
       </Card>
       <Card
-        className={`${classes.card} ${classes.blueCard}`}
-        style={{ width: "50%", height: "20vh" }}
+        style={{
+          minWidth: 275,
+          marginRight: "16px",
+          backgroundColor: "#2196f3",
+          width: "50%",
+          height: "20vh",
+        }}
       >
         <CardContent style={{ display: "flex" }}>
           <img

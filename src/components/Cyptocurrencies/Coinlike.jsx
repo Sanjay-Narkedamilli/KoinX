@@ -1,48 +1,8 @@
 import React, { useState, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  makeStyles,
-  CardMedia,
-  Box,
-} from "@material-ui/core";
+import { Card, CardContent, Typography, CardMedia, Box } from "@mui/material";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
-const useStyles = makeStyles((theme) => ({
-  scrollContainer: {
-    display: "flex",
-    overflowX: "auto",
-    padding: theme.spacing(2),
-  },
-  card: {
-    minWidth: 275,
-    marginRight: theme.spacing(2),
-    backgroundColor: "#FFFFFF", // White background color for all cards
-  },
-  coinImage: {
-    height: 50,
-    width: 50,
-    marginRight: theme.spacing(1),
-  },
-  greenBox: {
-    backgroundColor: "#4caf50",
-    color: "#FFFFFF",
-    padding: theme.spacing(0.5),
-    borderRadius: theme.spacing(0.5),
-    marginLeft: "auto",
-  },
-  redBox: {
-    backgroundColor: "#f44336",
-    color: "#FFFFFF",
-    padding: theme.spacing(0.5),
-    borderRadius: theme.spacing(0.5),
-    marginLeft: "auto",
-  },
-}));
-
 const Coinlike = () => {
-  const classes = useStyles();
   const [trendingCoins, setTrendingCoins] = useState([]);
 
   useEffect(() => {
@@ -64,24 +24,37 @@ const Coinlike = () => {
   return (
     <>
       <h2 style={{ margin: "20px" }}>You May Also Like</h2>
-      <div className={classes.scrollContainer}>
+      <div style={{ display: "flex", overflowX: "auto", padding: "16px" }}>
         {trendingCoins.map((coin, index) => (
-          <Card key={index} className={classes.card} style={{ width: "150px" }}>
+          <Card
+            key={index}
+            style={{
+              minWidth: 275,
+              marginRight: "16px",
+              backgroundColor: "#FFFFFF",
+              width: "150px",
+            }}
+          >
             <CardContent style={{ display: "flex", alignItems: "center" }}>
               <CardMedia
-                className={classes.coinImage}
-                image={coin.item.large}
-                title={coin.item.name}
+                component="img"
+                src={coin.item.large}
+                style={{ height: 50, width: 50, marginRight: "8px" }}
               />
               <Typography variant="h6" component="h3">
                 {coin.item.symbol}
               </Typography>
               <Box
-                className={
-                  coin.item.data.price_change_percentage_24h.usd > 0
-                    ? classes.greenBox
-                    : classes.redBox
-                }
+                style={{
+                  backgroundColor:
+                    coin.item.data.price_change_percentage_24h.usd > 0
+                      ? "#4caf50"
+                      : "#f44336",
+                  color: "#FFFFFF",
+                  padding: "4px",
+                  borderRadius: "4px",
+                  marginLeft: "auto",
+                }}
               >
                 <Typography variant="body2" component="span">
                   {coin.item.data.price_change_percentage_24h.usd.toFixed(2)}%
@@ -103,24 +76,36 @@ const Coinlike = () => {
         ))}
       </div>
       <h2 style={{ margin: "20px" }}>Trending Coins</h2>
-      <div className={classes.scrollContainer}>
+      <div style={{ display: "flex", overflowX: "auto", padding: "16px" }}>
         {trendingCoins.map((coin, index) => (
-          <Card key={index} className={classes.card}>
+          <Card
+            key={index}
+            style={{
+              minWidth: 275,
+              marginRight: "16px",
+              backgroundColor: "#FFFFFF",
+            }}
+          >
             <CardContent style={{ display: "flex", alignItems: "center" }}>
               <CardMedia
-                className={classes.coinImage}
-                image={coin.item.large}
-                title={coin.item.name}
+                component="img"
+                src={coin.item.large}
+                style={{ height: 50, width: 50, marginRight: "8px" }}
               />
               <Typography variant="h6" component="h3">
                 {coin.item.symbol}
               </Typography>
               <Box
-                className={
-                  coin.item.data.price_change_percentage_24h.usd > 0
-                    ? classes.greenBox
-                    : classes.redBox
-                }
+                style={{
+                  backgroundColor:
+                    coin.item.data.price_change_percentage_24h.usd > 0
+                      ? "#4caf50"
+                      : "#f44336",
+                  color: "#FFFFFF",
+                  padding: "4px",
+                  borderRadius: "4px",
+                  marginLeft: "auto",
+                }}
               >
                 <Typography variant="body2" component="span">
                   {coin.item.data.price_change_percentage_24h.usd.toFixed(2)}%
