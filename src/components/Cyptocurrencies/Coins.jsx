@@ -52,86 +52,90 @@ const Coins = () => {
   return (
     <div className="full">
       <div className="colu1">
-      <h5>
-        <span className="crycn">Cryptocurrency</span> &gt;&gt; {id}
-      </h5>
-      <div className="coin">
-        <div className="nme">
-          <img className="cin-img" src={coin.image.thumb} alt={id} />
-          <span className="cin-name ">{coin.name}</span>
-          <span className="cin-sym">{coin.symbol.toUpperCase()}</span>
-          <div className="rank">
-            Rank #<span>{coin.market_cap_rank}</span>
+        <h5>
+          <span className="crycn">Cryptocurrency</span> &gt;&gt; {id}
+        </h5>
+        <div className="coin">
+          <div className="nme">
+            <img className="cin-img" src={coin.image.thumb} alt={id} />
+            <span className="cin-name ">{coin.name}</span>
+            <span className="cin-sym">{coin.symbol.toUpperCase()}</span>
+            <div className="rank">
+              Rank #<span>{coin.market_cap_rank}</span>
+            </div>
+          </div>
+          <div className="price">
+            <span className="price-usd">
+              ${coin.market_data.current_price.usd.toLocaleString()}
+            </span>
+            <div className="pch">
+              <PriceChangeDisplay
+                priceChange={coin.market_data.price_change_percentage_24h}
+              />
+            </div>
+            <span className="pchr">(24H)</span>
+          </div>
+          <div className="price">
+            <span className="price-inr ">
+              ₹{coin.market_data.current_price.inr.toLocaleString()}
+            </span>
+          </div>
+          {!chartRendered && (
+            <TradingViewWidget symboli={coin.symbol.toUpperCase()} />
+          )}{" "}
+          {/* Render TradingViewWidget if chartRendered is false */}
+          <div className="chart" onClick={renderChart}>
+            {/* This div can be clicked to render the chart */}
           </div>
         </div>
-        <div className="price">
-          <span className="price-usd">
-            ${coin.market_data.current_price.usd.toLocaleString()}
-          </span>
-          <div className="pch">
-            <PriceChangeDisplay
-              priceChange={coin.market_data.price_change_percentage_24h}
-            />
+        <div className="sentiments">
+          <Keyevents />
+        </div>
+
+        <div className="about-coin">
+          <div className="about-sec">
+            <h1>About {coin.name}</h1>
           </div>
-          <span className="pchr">(24H)</span>
-        </div>
-        <div className="price">
-          <span className="price-inr ">
-            ₹{coin.market_data.current_price.inr.toLocaleString()}
-          </span>
-        </div>
-        {!chartRendered && <TradingViewWidget />}{" "}
-        {/* Render TradingViewWidget if chartRendered is false */}
-        <div className="chart" onClick={renderChart}>
-          {/* This div can be clicked to render the chart */}
-        </div>
-      </div>
-      <div className="sentiments">
-        <Keyevents />
-      </div>
 
-      <div className="about-coin">
-        <div className="about-sec">
-          <h1>About {coin.name}</h1>
+          <div className="about-sec">
+            <h3>What is {coin.name}?</h3>
+          </div>
+          <div className="about-sec">
+            <p>{coin.description.en.substring(0, 501)}</p>
+          </div>
+          <div className="about-sec">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+          </div>
+          <div className="about-sec">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              doloremque doloribus aperiam qui praesentium molestiae enim
+              dolores, voluptates odit, quos quasi eligendi recusandae animi
+              consectetur error corrupti quia dolorem, itaque earum nam
+              obcaecati? Veniam sed quas sequi, exercitationem fugiat id odit
+              voluptatibus harum odio? Rerum reprehenderit magnam illo
+              necessitatibus sunt.
+            </p>
+          </div>
+          <div className="about-sec">
+            <h3>Already Holding {coin.name}?</h3>
+            <Twocards />
+          </div>
         </div>
-
-        <div className="about-sec">
-          <h3>What is {coin.name}?</h3>
+        <div className="tokenomics">
+          <Tokenomics />
         </div>
-        <div className="about-sec">
-          <p>{coin.description.en.substring(0, 501)}</p>
+        <div className="tokenomics">
+          <Team />
         </div>
-        <div className="about-sec">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-        </div>
-        <div className="about-sec">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            doloremque doloribus aperiam qui praesentium molestiae enim dolores,
-            voluptates odit, quos quasi eligendi recusandae animi consectetur
-            error corrupti quia dolorem, itaque earum nam obcaecati? Veniam sed
-            quas sequi, exercitationem fugiat id odit voluptatibus harum odio?
-            Rerum reprehenderit magnam illo necessitatibus sunt.
-          </p>
-        </div>
-        <div className="about-sec">
-          <h3>Already Holding {coin.name}?</h3>
-          <Twocards/>
+        <div className="alsolike">
+          <Coinlike />
         </div>
       </div>
-       <div className="tokenomics">
-        <Tokenomics/>
-       </div>
-       <div className="tokenomics">
-        <Team/>
-       </div>
-       <div className="alsolike">
-        <Coinlike/>
-       </div>
+      <div className="colu2">
+        <Getstarted />
+      </div>
     </div>
-    <div className="colu2"><Getstarted/></div>
-    </div>
-    
   );
 };
 

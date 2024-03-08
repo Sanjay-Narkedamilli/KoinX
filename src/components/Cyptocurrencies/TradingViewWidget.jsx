@@ -1,7 +1,6 @@
-// TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
-const TradingViewWidget = () => {
+const TradingViewWidget = ({ symboli }) => {
   const container = useRef();
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const TradingViewWidget = () => {
     script.innerHTML = `
       {
         "autosize": true,
-        "symbol": "BITSTAMP:BTCUSD",
+        "symbol": "BINANCE:${symboli}USD",
         "interval": "D",
         "timezone": "Etc/UTC",
         "theme": "light",
@@ -29,7 +28,7 @@ const TradingViewWidget = () => {
     return () => {
       container.current.removeChild(script);
     };
-  }, []);
+  }, [symboli]);
 
   return (
     <div
@@ -37,7 +36,6 @@ const TradingViewWidget = () => {
       ref={container}
       style={{ height: "400px", width: "100%" }}
     >
-   
       <div
         className="tradingview-widget-container__widget"
         style={{ height: "calc(100% - 32px)", width: "100%" }}
