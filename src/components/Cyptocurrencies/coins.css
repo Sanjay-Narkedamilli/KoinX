@@ -201,23 +201,27 @@ h5{
 }
 .cir{
     display: flex;
-    background-color: rgba(72, 247, 9, 0.166);
-    width: 100px;
-    height:100px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 50%;
-    color: green;
+        background-color: rgba(72, 247, 9, 0.166);
+        width: 70px;
+        height: 70px;
+        margin: 20px;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50%;
+        color: green;
+    }
 }
 .box{
-    margin-left: 40px;
+    width:40%;
+    /* margin-left: 40px; */
 }
 .box-cnt{
     display: flex;
     margin:10px;
     align-items: center;
-    width:70vw;
+    width:60vw;
     color: grey;
 }
 .buy{
