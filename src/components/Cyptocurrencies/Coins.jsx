@@ -50,9 +50,10 @@ const Coins = () => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
-
+  
   return (
     <div className="full">
+      document.title=KoinX - {coin.name};
       <div className="colu1">
         <h5>
           <span className="crycn">Cryptocurrency</span> &gt;&gt; {id}
