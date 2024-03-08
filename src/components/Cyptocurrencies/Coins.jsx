@@ -42,7 +42,7 @@ const Coins = () => {
     };
 
     fetchData();
-    document.title=KoinX - {id};
+    document.title=`KoinX - ${coin.name}`
   }, [id]);
 
   const renderChart = () => {
