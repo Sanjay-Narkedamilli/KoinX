@@ -42,6 +42,7 @@ const Coins = () => {
     };
 
     fetchData();
+    document.title=KoinX - {id};
   }, [id]);
 
   const renderChart = () => {
@@ -53,7 +54,6 @@ const Coins = () => {
   
   return (
     <div className="full">
-      document.title=KoinX - {coin.name};
       <div className="colu1">
         <h5>
           <span className="crycn">Cryptocurrency</span> &gt;&gt; {id}
