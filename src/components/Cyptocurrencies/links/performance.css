@@ -1,0 +1,135 @@
+.headp{
+    margin:1px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+}
+.tablef{
+    margin: 10px;
+    display: flex;
+}
+.headf{
+    margin:1px;
+    /* display: flex; */
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    color:grey;
+}
+.blocki{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    margin: 10px;
+    margin-top: 0px;
+    font-size: small;
+    color: grey;
+}
+.tlow{
+    /* display: flex; */
+    margin-left:10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.ti{
+    margin-top: 5px;
+}
+
+.midle{
+    margin-top:30px ;
+    width: 80%;
+}
+.thigh{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.bar{
+    margin: 10px;
+    margin-bottom: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.673), rgba(0, 252, 0, 0.685));
+}
+.cprice {
+    margin-top: 2px;
+}
+.upic{
+
+    margin-bottom: 12px;
+    height: 5px;
+    width: 2px;
+}
+.tablef{
+    display: flex;
+    justify-content: space-between;
+}
+.cdi{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    margin:5px;
+    padding: 3px;
+    border-radius: 12px;
+    font-size:90%;
+}
+.leftf{
+    
+    width: 48%;
+}
+.rightf{
+    width: 48%;
+}
+.heading{
+    margin-left: 3px;
+    align-items: start;
+    justify-content: start;
+}
+.val{
+    display: flex;
+    color: black;
+    margin-right: 3px;
+    align-items: end;
+    justify-content: end;
+}
+.changer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:5px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.099);
+    font-size: 70%;
+    padding: 4px;
+    color: red;
+}
+.changeg{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    margin-left:5px;
+    border-radius: 5px;
+    background-color: rgba(0, 255, 38, 0.099);
+    font-size: 70%;
+    padding: 4px;
+    color: green;
+}
+@media (max-width: 480px) {
+    .tablef{
+        display: inline;
+    }
+    .leftf{
+        width: 95%;
+    }
+    .rightf{
+        width: 95%;
+    }
+}

@@ -17,6 +17,8 @@ import Team from "./Team";
 import Alsolike from "./Alsolike";
 import Coinlike from "./Coinlike";
 import Getstarted from "./Getstarted";
+import Links from "./links/Links";
+import Performance from "./links/Performance";
 
 const Coins = () => {
   const { id } = useParams();
@@ -88,6 +90,8 @@ const Coins = () => {
             {/* This div can be clicked to render the chart */}
           </div>
         </div>
+        <div className="links"><Links/></div>
+        <div className="performance"><Performance coin={coin}/></div>
         <div className="sentiments">
           <Keyevents />
         </div>

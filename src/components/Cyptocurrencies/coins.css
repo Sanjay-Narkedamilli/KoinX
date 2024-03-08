@@ -85,6 +85,15 @@ h5{
     background-color: white;
     border-radius: 10px;
 }
+.links{
+    margin: 10px;
+        border-radius: 10px;
+}
+.performance {
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
 .about-coin {
     /* width: 80%; */
     margin: 10px;
