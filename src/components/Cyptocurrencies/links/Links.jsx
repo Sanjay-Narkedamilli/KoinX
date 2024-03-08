@@ -1,8 +1,9 @@
 import React from "react";
-import './links.css'
+import "./links.css";
+
 const Links = () => {
   return (
-    <div className='linkview'>
+    <div className="linkview" style={{ marginTop:"5px",height: "20px", overflowY: "scroll" }}>
       <div className="overview1">Overview</div>
       <div className="overview">Fundamentals</div>
       <div className="overview">NewInsights</div>
